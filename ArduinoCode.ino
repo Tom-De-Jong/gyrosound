@@ -89,17 +89,6 @@ void loop() {
   if (final_volume < 5) {
     leds_to_light = 0;
   }
-  
-  // Kijken welke kleur aan moet gaan DIT IS OUD
-  for (int l = 0; l < leds_to_light; l++) {
-    if (l < NUM_LEDS / 3) {
-      leds[l] = CRGB::Red; // Low volume
-    } else if (l < (2 * NUM_LEDS) / 3) {
-      leds[l] = CRGB::Red; // Medium volume
-    } else {
-      leds[l] = CRGB::Red; // High volume
-    }
-  }
 
 // laat alle nodige leds branden en print debug logs naar console (sensor output voor testing)
   FastLED.show();
